@@ -279,27 +279,28 @@
 
       <span>Analytics Dashboard</span>
 
-      <h2>Interactive Power BI Visualization</h2>
+      <h2>Dashboard Report Preview</h2>
 
     </div>
 
     <p style="text-align: center; color: #666; margin-bottom: 30px;">
-      Explore customer segmentation, revenue trends, and retention economics across 4 dashboard pages
+      Browse the exported dashboard report, including customer segments, product performance, geography, and revenue insights.
     </p>
 
-    <p class="dashboard-note">If the report does not load, it may not be published for public web viewing. Use the Power BI sharing settings to enable a public embed only if the report data is intended to be public.</p>\n    <div class="dashboard-container">
-
+    <p class="dashboard-note">If the report does not load, it may not be published for public web viewing. Use the Power BI sharing settings to enable a public embed only if the report data is intended to be public.</p>\n    <div class="dashboard-container pdf-dashboard">
+      <div class="pdf-toolbar">
+        <span><strong>Project Dashboard Report</strong><small>PDF preview · 6 pages</small></span>
+        <a class="primary-btn" href="analytics.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
+      </div>
       <iframe
-      title="Customer Customer Insights"
-      width="100%"
-      height="750"
-      src="https://app.powerbi.com/view?r=eyJrIjoiYjhiYzg2NWEtMjBkMi00Yjk5LTk4MDMtOTRkNGQ3ZjY3OGE0IiwidCI6IjNiMjk5M2Q3LTQ5YmYtNGYyOS1iNzk0LWRkNTcyN2Y0NWVlMiJ9"
-      frameborder="0"
-      allowFullScreen="true">
-    </iframe>
-
+        title="Customer Segmentation and Churn Prediction dashboard PDF"
+        src="analytics.pdf#toolbar=1&navpanes=0&view=FitH"
+        width="100%"
+        height="820"
+        loading="lazy">
+      </iframe>
+      <p class="pdf-fallback">If the preview does not appear in your browser, <a href="analytics.pdf" target="_blank" rel="noopener">open the dashboard PDF here</a>.</p>
     </div>
-
   </section>
 
   <!-- CTA SECTION -->
@@ -311,7 +312,7 @@
       <h2>Ready to Explore?</h2>
 
       <p>
-        Explore the source code, analysis pipeline, and Power BI build guide in the project repository.
+        Explore the source code and analysis pipeline, or open the exported dashboard report directly.
       </p>
 
       <div class="cta-buttons">
@@ -355,7 +356,7 @@
         <h4>Resources</h4>
         <ul>
           <li><a href="https://github.com/Harjot2022/Customer-Segmentation-and-Churn-Prediction#readme" target="_blank">Documentation</a></li>
-          <li><a href="docs/POWER_BI_GUIDE.md" target="_blank">Power BI Build Guide</a></li>
+          <li><a href="analytics.pdf" target="_blank" rel="noopener">Dashboard PDF</a></li>
           <li><a href="https://github.com/Harjot2022/Customer-Segmentation-and-Churn-Prediction/issues" target="_blank">Report Issue</a></li>
           <li><a href="https://github.com/Harjot2022" target="_blank">Author</a></li>
         </ul>

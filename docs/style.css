@@ -832,3 +832,47 @@ iframe {
   max-width: 1000px;
   margin: 0 auto 22px;
 }
+
+
+/* ===== SELF-HOSTED DASHBOARD PDF ===== */
+.pdf-dashboard {
+  padding: 18px;
+}
+.pdf-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 4px 18px;
+}
+.pdf-toolbar span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.pdf-toolbar small {
+  color: var(--muted);
+  font-size: 13px;
+}
+.pdf-dashboard iframe {
+  width: 100%;
+  min-height: 620px;
+  background: #f8fafc;
+}
+.pdf-fallback {
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+  margin: 14px 0 4px;
+}
+.pdf-fallback a {
+  color: var(--primary);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .pdf-dashboard iframe {
+    height: 650px;
+    min-height: 500px;
+  }
+}
