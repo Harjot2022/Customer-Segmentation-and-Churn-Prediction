@@ -7,18 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Customer Segmentation and Churn Prediction: explore transparent RFM customer segments, historical revenue insights, and an interactive Power BI dashboard built with Python and Pandas." />
-  <meta name="keywords" content="customer segmentation, churn risk, RFM analysis, Power BI, Python, Pandas, business intelligence, Olist ecommerce" />
+  <meta name="description" content="Customer Segmentation and Sales Analytics Dashboard: rule-based RFM segments, exploratory K-means customer groups, and sales analytics in Power BI, built with Python, pandas, and scikit-learn on the Olist dataset." />
+  <meta name="keywords" content="customer segmentation, RFM analysis, K-means clustering, sales analytics, Power BI, Python, Pandas, scikit-learn, Olist ecommerce" />
   <meta name="author" content="Harjot Singh" />
   <meta name="theme-color" content="#0f766e" />
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Customer Segmentation and Churn Prediction" />
-  <meta property="og:description" content="RFM-based customer segmentation and historical churn-risk insights with an interactive Power BI dashboard." />
+  <meta property="og:title" content="Customer Segmentation &amp; Sales Analytics Dashboard" />
+  <meta property="og:description" content="RFM customer segmentation, exploratory K-means clustering, and sales analytics on the Olist dataset, visualized in Power BI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://harjot2022.github.io/Customer-Segmentation-and-Churn-Prediction/" />
 
-  <title>Customer Segmentation and Churn Prediction | Power BI</title>
+  <title>Customer Segmentation &amp; Sales Analytics Dashboard | Power BI</title>
 
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 
 </head>
 
@@ -42,6 +42,7 @@
       <ul class="nav-menu">
         <li><a href="#overview" class="nav-link">Overview</a></li>
         <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#ml" class="nav-link">ML Clusters</a></li>
         <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
         <li><a href="https://github.com/Harjot2022/Customer-Segmentation-and-Churn-Prediction" target="_blank" class="nav-link">GitHub</a></li>
       </ul>
@@ -56,15 +57,15 @@
     <div class="hero-content">
 
       <span class="badge">
-        Customer Analytics • RFM Segmentation • Churn-Risk Insights
+        Customer Analytics • RFM Segmentation • Sales Analytics
       </span>
 
       <h1>
-        Customer Segmentation and Churn Prediction
+        Customer Segmentation &amp; Sales Analytics Dashboard
       </h1>
 
       <p>
-        An end-to-end customer analytics project using Python and Pandas to prepare e-commerce data, apply transparent RFM segmentation, and present purchasing patterns and churn-risk indicators through an interactive Power BI dashboard built on the Olist Brazilian E-Commerce Dataset.
+        An analytics pipeline on the Olist Brazilian E-Commerce Dataset: Python and pandas clean the data and apply rule-based RFM segmentation, scikit-learn adds exploratory K-means customer groups, and Power BI presents customer, product, and geography insights from a single Excel workbook.
       </p>
 
       <div class="hero-buttons">
@@ -91,8 +92,8 @@
   <section class="metrics">
 
     <div class="metric-card">
-      <div class="metric-value">96K+</div>
-      <p>Customers Analyzed</p>
+      <div class="metric-value">93K</div>
+      <p>Customers Segmented</p>
     </div>
 
     <div class="metric-card">
@@ -125,7 +126,8 @@
         scoring, not machine learning &mdash; segments customers into 7 groups
         for targeted retention. Every metric runs on the true customer identity
         (<code>customer_unique_id</code>), not the per-order key the raw data
-        exposes by default.
+        exposes by default. A separate K-means model adds exploratory,
+        data-driven customer groups (see below).
       </p>
 
       <div class="segments-list">
@@ -134,7 +136,7 @@
           <li><strong>Champions:</strong> Best customers, highest value</li>
           <li><strong>Loyal Customers:</strong> Consistent purchasers</li>
           <li><strong>Potential Loyalist:</strong> High conversion potential</li>
-          <li><strong>Need Attention:</strong> Largest segment by size</li>
+          <li><strong>Need Attention:</strong> Largest segment, ~40% of customers</li>
           <li><strong>At Risk:</strong> Elevated recency, previously high value</li>
           <li><strong>New Customers:</strong> Recent, low frequency</li>
           <li><strong>Lost:</strong> Inactive for an extended period</li>
@@ -157,7 +159,7 @@
 
       <p class="section-subtitle">
         How raw data becomes a boardroom-ready dashboard &mdash; no database,
-        no ML, four tools end to end.
+        no server, four tools end to end.
       </p>
 
     </div>
@@ -175,11 +177,12 @@
 
       <div class="pipeline-stage">
         <div class="stage-icon">🐍</div>
-        <h3>Python + pandas</h3>
-        <p>Clean, join, and RFM-score every table &mdash; rule-based, not ML</p>
+        <h3>Python Pipeline</h3>
+        <p>Clean, join, and RFM-score (rule-based), then cluster customers with K-means</p>
         <div class="stage-tech">
           <span class="stage-badge">Python</span>
           <span class="stage-badge">pandas</span>
+          <span class="stage-badge">scikit-learn</span>
         </div>
       </div>
 
@@ -197,7 +200,7 @@
       <div class="pipeline-stage">
         <div class="stage-icon">📈</div>
         <h3>Power BI</h3>
-        <p>Relationships, DAX measures, a 4-page interactive dashboard</p>
+        <p>Relationships, DAX measures, a 5-page report including ML customer groups</p>
         <div class="stage-tech">
           <span class="stage-badge">Power BI</span>
           <span class="stage-badge">DAX</span>
@@ -259,15 +262,78 @@
         <h3>Retention ROI</h3>
 
         <p>
-          Recovering just 20% of the "At Risk" segment's historical spend
-          would add roughly R$641K in revenue &mdash; modeled directly in
-          the dashboard's retention scenarios, transparently and without
-          an ML probability score.
+          A hypothetical scenario: recovering 20% of the "At Risk" segment's
+          historical spend would add roughly R$641K in revenue. It is a
+          what-if on past spend, not a forecast, and uses no ML probability score.
         </p>
 
       </div>
 
     </div>
+
+  </section>
+
+  <!-- ML CLUSTERING -->
+
+  <section class="insights" id="ml">
+
+    <div class="section-title">
+
+      <span>Machine Learning</span>
+
+      <h2>Exploratory ML Customer Groups</h2>
+
+      <p class="section-subtitle">
+        Alongside the rule-based RFM segments, a K-means model learns
+        customer groups directly from recency, frequency, and monetary value.
+      </p>
+
+    </div>
+
+    <div class="insight-grid">
+
+      <div class="insight-card">
+        <div class="icon">⚙️</div>
+        <h3>How It Works</h3>
+        <p>
+          RFM features are log-transformed (<code>log1p</code>) and standardized,
+          then clustered with K-means (fixed seed, 10 initializations). The number
+          of clusters, from 2 to 6, is chosen by silhouette score on a fixed sample
+          of up to 2,000 customers. IDs, ratings, and RFM labels are not features.
+        </p>
+      </div>
+
+      <div class="insight-card">
+        <div class="icon">📦</div>
+        <h3>What It Produces</h3>
+        <p>
+          Four tables, exported as CSVs and Excel sheets: customer clusters,
+          cluster profiles, model selection, and an ML-vs-RFM comparison. The
+          fitted pipeline is saved as a <code>joblib</code> bundle for assigning
+          new customers with compatible RFM features.
+        </p>
+      </div>
+
+      <div class="insight-card">
+        <div class="icon">⚠️</div>
+        <h3>What It Is Not</h3>
+        <p>
+          These are exploratory groups, not churn probabilities or lifetime-value
+          predictions. Silhouette measures cluster separation, not predictive
+          accuracy, and there is no held-out outcome validation. Cluster numbers
+          are arbitrary and can change when the model is refit.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="project-caveat">
+      In the current run the model selected k=2 (silhouette 0.72): a small group
+      of about 2.8K repeat buyers (roughly 3% of customers, 2.1 orders on average)
+      and a large group of one-time buyers. A high silhouette here reflects how
+      easy that split is, not predictive power. Cluster results can change when
+      the model is refit.
+    </p>
 
   </section>
 
@@ -287,9 +353,10 @@
       Browse the exported dashboard report, including customer segments, product performance, geography, and revenue insights.
     </p>
 
-    <p class="dashboard-note">If the report does not load, it may not be published for public web viewing. Use the Power BI sharing settings to enable a public embed only if the report data is intended to be public.</p>\n    <div class="dashboard-container pdf-dashboard">
+    <p class="dashboard-note">This is a static PDF export of the Power BI report. The interactive version is the <code>analytics.pbix</code> file in the GitHub repository, opened in Power BI Desktop.</p>
+    <div class="dashboard-container pdf-dashboard">
       <div class="pdf-toolbar">
-        <span><strong>Project Dashboard Report</strong><small>PDF preview · 6 pages</small></span>
+        <span><strong>Project Dashboard Report</strong><small>5-page PDF export of the Power BI report</small></span>
         <a class="primary-btn" href="analytics.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
       </div>
       <iframe
@@ -338,8 +405,8 @@
     <div class="footer-content">
 
       <div class="footer-section">
-        <h3>Customer Customer Insights</h3>
-        <p>A customer analytics project using Python, Pandas, Excel, and Power BI to explore RFM segments and historical churn-risk indicators.</p>
+        <h3>Customer Insights</h3>
+        <p>A customer analytics project using Python, pandas, scikit-learn, Excel, and Power BI to explore RFM segments, exploratory ML clusters, and sales performance.</p>
       </div>
 
       <div class="footer-section">
@@ -347,6 +414,7 @@
         <ul>
           <li><a href="#overview">Overview</a></li>
           <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#ml">ML Clusters</a></li>
           <li><a href="#dashboard">Dashboard</a></li>
           <li><a href="https://github.com/Harjot2022/Customer-Segmentation-and-Churn-Prediction" target="_blank">GitHub</a></li>
         </ul>

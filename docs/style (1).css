@@ -160,8 +160,8 @@ section {
   inset: 0;
   background:
     linear-gradient(135deg,
-      rgba(255, 107, 53, 0.25),
-      rgba(255, 71, 87, 0.25));
+      rgba(15, 118, 110, 0.10),
+      rgba(37, 99, 235, 0.10));
   animation: float 15s ease-in-out infinite;
 }
 
@@ -248,12 +248,12 @@ section {
 .primary-btn {
   background: linear-gradient(135deg, #0f766e, #2563eb);
   color: white;
-  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3);
 }
 
 .primary-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
+  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.5);
 }
 
 .secondary-btn {
@@ -267,7 +267,7 @@ section {
   transform: translateY(-4px);
   background: var(--primary);
   color: white;
-  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.3);
 }
 
 /* ===== METRICS SECTION ===== */
@@ -290,7 +290,7 @@ section {
 
 .metric-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 20px 40px rgba(15, 118, 110, 0.2);
   border-color: var(--accent);
 }
 
@@ -397,7 +397,7 @@ section {
 }
 
 .tech-badge:hover {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 71, 87, 0.2));
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.15), rgba(37, 99, 235, 0.15));
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
 }
@@ -453,7 +453,7 @@ section {
 /* ===== ARCHITECTURE / PIPELINE SECTION ===== */
 
 .architecture {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 71, 87, 0.05));
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.05), rgba(37, 99, 235, 0.05));
 }
 
 .pipeline {
@@ -507,7 +507,7 @@ section {
 }
 
 .stage-badge {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.12), rgba(255, 71, 87, 0.12));
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.10), rgba(37, 99, 235, 0.10));
   border: 1px solid var(--primary);
   padding: 4px 12px;
   border-radius: 999px;
@@ -875,4 +875,17 @@ iframe {
     height: 650px;
     min-height: 500px;
   }
+}
+
+
+/* ===== INLINE CODE ===== */
+code {
+  background: rgba(15, 118, 110, 0.08);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 0.9em;
+}
+.project-caveat {
+  max-width: 1000px;
+  margin: 30px auto 0;
 }
